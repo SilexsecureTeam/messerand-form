@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -16,11 +15,9 @@ const Form = () => {
     tel: "",
     mobile: "",
     email: "",
-    course_title: "",
   });
   const [loading, setLoading] = useState(false);
   const [countries, setCountries] = useState([]);
-  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -112,7 +109,7 @@ const Form = () => {
             theme: "dark",
           }
         );
-        // Reset form and navigate
+        // Reset form
         setFormData({
           first_name: "",
           surname: "",
@@ -125,14 +122,9 @@ const Form = () => {
           tel: "",
           mobile: "",
           email: "",
-          course_title: "",
         });
-        navigate("/success", {
-          state: {
-            first_name: formData.first_name,
-            course_title: formData.course_title,
-          },
-        });
+        // Navigate to external URL
+        window.location.href = "https://messerand.com/";
       } else {
         const errorData = await response.json();
         toast.error(
@@ -336,18 +328,6 @@ const Form = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 bg-transparent border-b border-[#7A7A7A] text-white placeholder-[#7A7A7A] focus:outline-none focus:border-[#fbd45a] transition-colors text-sm sm:text-base"
-                />
-              </div>
-              <div>
-                <label className="block text-[#ddd6d6c4] font-medium mb-2 text-sm sm:text-base">
-                  Course Title (Optional)
-                </label>
-                <input
-                  type="text"
-                  name="course_title"
-                  value={formData.course_title}
-                  onChange={handleChange}
                   className="w-full px-4 py-3 bg-transparent border-b border-[#7A7A7A] text-white placeholder-[#7A7A7A] focus:outline-none focus:border-[#fbd45a] transition-colors text-sm sm:text-base"
                 />
               </div>

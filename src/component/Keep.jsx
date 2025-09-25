@@ -1,3 +1,13 @@
+// now let the service have a dropdown of Advisory Services
+// ⁙ Procurement
+// ⁙ Infrastructure
+// ⁙ Public Finance
+// ⁙ HR Consultancy
+// ⁙EmployeeTraining
+// Events
+// ⁙Upcoming Events
+// ⁙⁠Past Events.      while the STRATEGIC PARTNER have a dropdown of RSBPP. now no need of the dropdown icon. just when user hover over it so the dropdown shows. that is all. the dropdown as a background color of bg-[#202428]
+
 import React, { useState } from "react";
 import logo from "../assets/logo.jpeg";
 import { MapPin, Menu, X } from "lucide-react";
@@ -45,14 +55,14 @@ const Header = () => {
                 } md:flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8 mt-4 md:mt-0`}
               >
                 <a
-                  href="https://messerand.com/"
+                  href="#"
                   className="text-[#ddd6d6c4] font-semibold text-base hover:text-[#fbd45a] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   HOME
                 </a>
                 <a
-                  href="https://messerand.com/about/"
+                  href="#"
                   className="text-[#ddd6d6c4] font-semibold text-base hover:text-[#fbd45a] transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -69,65 +79,65 @@ const Header = () => {
                     OUR SERVICES
                   </a>
                   <div
-                    className="absolute left-0 mt-2 w-52 bg-[#202428] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out group-hover:delay-150 z-10"
+                    className="absolute left-0 mt-2 w-48 bg-[#202428] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out group-hover:delay-150 z-10"
                     style={{ transitionDelay: "0ms, 150ms" }} // Delay for closing
                   >
-                    <div className="flex flex-col py-2 px-2 text-lg font-bold uppercase">
+                    <div className="flex flex-col py-2">
                       <a
-                        href="https://messerand.com/services/advisory-services/"
+                        href="#"
                         className="text-[#ddd6d6c4] hover:text-[#fbd45a] px-4 py-2 text-sm"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         Advisory Services
                       </a>
                       <a
-                        href="https://messerand.com/services/procurement/"
+                        href="#"
                         className="text-[#ddd6d6c4] hover:text-[#fbd45a] px-4 py-2 text-sm"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        ⁙ Procurement
+                        Procurement
                       </a>
                       <a
-                        href="https://messerand.com/services/infrastructure/"
+                        href="#"
                         className="text-[#ddd6d6c4] hover:text-[#fbd45a] px-4 py-2 text-sm"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        ⁙ Infrastructure
+                        Infrastructure
                       </a>
                       <a
-                        href="https://messerand.com/services/public-finance/"
+                        href="#"
                         className="text-[#ddd6d6c4] hover:text-[#fbd45a] px-4 py-2 text-sm"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        ⁙ Public Finance
+                        Public Finance
                       </a>
                       <a
-                        href="https://messerand.com/services/human-resources-consultancy/"
+                        href="#"
                         className="text-[#ddd6d6c4] hover:text-[#fbd45a] px-4 py-2 text-sm"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        ⁙ HR Consultancy
+                        HR Consultancy
                       </a>
                       <a
-                        href="https://messerand.com/services/trainings/"
+                        href="#"
                         className="text-[#ddd6d6c4] hover:text-[#fbd45a] px-4 py-2 text-sm"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        ⁙ Employee Training
+                        Employee Training
                       </a>
                       <a
-                        href="https://messerand.com/daasm2/"
+                        href="#"
                         className="text-[#ddd6d6c4] hover:text-[#fbd45a] px-4 py-2 text-sm"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        ⁙ Upcoming Events
+                        Upcoming Events
                       </a>
                       <a
-                        href="https://messerand.com/past-events/"
+                        href="#"
                         className="text-[#ddd6d6c4] hover:text-[#fbd45a] px-4 py-2 text-sm"
                         onClick={() => setIsMenuOpen(false)}
                       >
-                        ⁙ Past Events
+                        Past Events
                       </a>
                     </div>
                   </div>
@@ -146,9 +156,9 @@ const Header = () => {
                     className="absolute left-0 mt-2 w-48 bg-[#202428] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out group-hover:delay-150 z-10"
                     style={{ transitionDelay: "0ms, 150ms" }} // Delay for closing
                   >
-                    <div className="flex flex-col py-2 px-2 text-lg font-bold uppercase">
+                    <div className="flex flex-col py-2">
                       <a
-                        href="https://rsbpp.nl/"
+                        href="#"
                         className="text-[#ddd6d6c4] hover:text-[#fbd45a] px-4 py-2 text-sm"
                         onClick={() => setIsMenuOpen(false)}
                       >
@@ -160,12 +170,9 @@ const Header = () => {
               </nav>
 
               {/* Contact Button */}
-              <a
-                href="https://messerand.com/contact/"
-                className="bg-[#fbd45a] text-black px-6 py-3 md:px-10 md:py-4 font-semibold hover:bg-[#fbd45a]/80 transition-colors mt-4 md:mt-0 inline-block text-center"
-              >
+              <button className="bg-[#fbd45a] text-black px-6 py-3 md:px-10 md:py-4 font-semibold hover:bg-[#fbd45a]/80 transition-colors mt-4 md:mt-0">
                 CONTACT US
-              </a>
+              </button>
             </div>
           </div>
         </div>
